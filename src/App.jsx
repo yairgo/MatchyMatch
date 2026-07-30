@@ -33,6 +33,7 @@ import PuppyFetchBoard from './components/puppyfetch/PuppyFetchBoard'
 import CatMatchBoard from './components/catmatch/CatMatchBoard'
 import ChessBoard from './components/chess/ChessBoard'
 import KennyBoard from './components/kenny/KennyBoard'
+import SolitaireBoard from './components/solitaire/SolitaireBoard'
 import KenoBoard from './components/keno/KenoBoard'
 import { puzzles } from './data/puzzles'
 
@@ -135,6 +136,8 @@ function App() {
           <ChessBoard key={`chess-${gameKey}`} />
         ) : activeGame === 'kenny' ? (
           <KennyBoard key={`kenny-${gameKey}`} />
+        ) : activeGame === 'solitaire' ? (
+          <SolitaireBoard key={`solitaire-${gameKey}`} />
         ) : activeGame === 'keno' ? (
           <KenoBoard key={`keno-${gameKey}`} />
         ) : (

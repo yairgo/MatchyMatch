@@ -210,6 +210,13 @@ const GAMES = [
     color: '#0a84ff',
   },
   {
+    id: 'solitaire',
+    emoji: '♠️',
+    name: 'Solitaire',
+    description: 'Classic Klondike card game — stack them all!',
+    color: '#34c759',
+  },
+  {
     id: 'keno',
     emoji: '🎱',
     name: 'Keno',
