@@ -32,7 +32,7 @@ function getRating(total) {
 
 // ── Sub-components ────────────────────────────────────────────────
 
-function TimingBar({ progress, hit, hitFraction, speed }) {
+function TimingBar({ progress, hit }) {
   // progress: 0–1 (current marker position)
   // hit: null | 'perfect' | 'great' | 'good' | 'miss'
   const markerLeft = `${progress * 100}%`

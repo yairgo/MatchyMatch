@@ -1,4 +1,3 @@
-import { clsx } from "clsx";
 import { COLOR_STYLES } from "../data/puzzles";
 
 export default function RevealedCategory({ category }) {

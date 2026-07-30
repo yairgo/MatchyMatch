@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import { clsx } from "clsx";
 import { CARD_SETS, buildDeck } from "../../data/memoryCards";
 import Toast from "../Toast";
 

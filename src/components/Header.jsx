@@ -1,6 +1,6 @@
 import DarkModeToggle from './DarkModeToggle'
 
-export default function Header({ activeGame, onGameChange, onGoHome, dark, onToggleDark }) {
+export default function Header({ activeGame, onGoHome, dark, onToggleDark }) {
   return (
     <header
       style={{

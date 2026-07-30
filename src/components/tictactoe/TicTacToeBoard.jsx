@@ -1,5 +1,4 @@
 import { useState, useCallback } from 'react'
-import { clsx } from 'clsx'
 
 // ── Single cell ───────────────────────────────────────────────────
 
@@ -220,8 +219,6 @@ export default function TicTacToeBoard() {
   const [draws, setDraws] = useState(0)
   const [isAIThinking, setIsAIThinking] = useState(false)
 
-  const winner = calculateWinner(squares)
-  const isBoardFull = squares.every((sq) => sq !== null)
 
   const handleCellClick = useCallback(
     (index) => {

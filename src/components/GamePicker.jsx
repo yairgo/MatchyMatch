@@ -216,6 +216,13 @@ const GAMES = [
     description: 'Classic Klondike card game — stack them all!',
     color: '#34c759',
   },
+  {
+    id: 'keno',
+    emoji: '🎱',
+    name: 'Keno',
+    description: 'Pick up to 10 numbers and match the draw to win credits',
+    color: '#5856d6',
+  },
 ]
 
 export default function GamePicker({ onGameSelect }) {
