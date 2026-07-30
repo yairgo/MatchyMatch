@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
+import { kenoNumbers } from '../data/kenoNumbers';
+
 const KenoBoard = () => {
-  const [numbers, setNumbers] = useState(Array(80).fill(null).map((_, i) => i + 1));
+  const [numbers, setNumbers] = useState(kenoNumbers);
   const [selectedNumbers, setSelectedNumbers] = useState([]);
   const [drawnNumbers, setDrawnNumbers] = useState([]);
   const [betAmount, setBetAmount] = useState(1);
@@ -69,7 +71,7 @@ const KenoBoard = () => {
                 cursor: 'pointer',
               }
             }
-          >
+         >
             {number}
           </button>
         ))}
@@ -83,4 +85,3 @@ const KenoBoard = () => {
 }
 
 export default KenoBoard;
-
