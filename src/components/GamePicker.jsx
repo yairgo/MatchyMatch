@@ -209,6 +209,13 @@ const GAMES = [
     description: 'Click as fast as you can to rack up points!',
     color: '#0a84ff',
   },
+  {
+    id: 'solitaire',
+    emoji: '🂡',
+    name: 'Solitaire',
+    description: 'Classic Klondike — build all four suits from Ace to King',
+    color: '#1a56db',
+  },
 ]
 
 export default function GamePicker({ onGameSelect }) {
@@ -251,3 +258,4 @@ export default function GamePicker({ onGameSelect }) {
     </div>
   )
 }
+
