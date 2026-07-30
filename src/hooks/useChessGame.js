@@ -102,9 +102,7 @@ export function useChessGame() {
     let newTurn = 'white'
 
     for (let i = 0; i < moveHistory.length - 1; i++) {
-      const move = moveHistory[i]
-      const fromSquare = { row: move.row, col: move.col }
-      const toSquare = { row: move.row, col: move.col }
+      // move = moveHistory[i] would be used in a full undo implementation
 
       // This is a simplified undo - in production, you'd store full move data
       // For now, we'll just remove the last move from history

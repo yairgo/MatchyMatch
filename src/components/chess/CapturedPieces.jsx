@@ -24,7 +24,7 @@ export default function CapturedPieces({ capturedPieces }) {
   const whiteMaterial = calculateMaterial(capturedPieces.black)
   const blackMaterial = calculateMaterial(capturedPieces.white)
 
-  const renderPieces = (pieces, color) => {
+  const renderPieces = (pieces) => {
     return pieces.map((piece, idx) => (
       <span key={idx} className={`captured-piece piece-${piece.color}`}>
         {PIECE_SYMBOLS[piece.type][piece.color]}

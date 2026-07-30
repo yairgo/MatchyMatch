@@ -143,11 +143,6 @@ function ResultScreen({ wpm, accuracy, elapsed, phrase, onPlayAgain, onNewPhrase
     wpm >= 20 ? { emoji: "🐢", label: "Keep practising!" } :
                 { emoji: "🌱", label: "Just getting started!" };
 
-  const accColor =
-    accuracy === 100 ? "#34c759" :
-    accuracy >= 90   ? "#30d158" :
-    accuracy >= 75   ? "#ff9f0a" : "#ff3b30";
-
   return (
     <div
       className="spring-pop flex flex-col items-center gap-6 p-8 rounded-3xl w-full max-w-sm mx-auto"

@@ -225,7 +225,6 @@ function Game({ problems, onNewGame }) {
     setTotalTime((t) => t + elapsed);
     triggerShake();
     showToast("Time's up! ⏰");
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [showToast]);
 
   const handleSubmit = () => {

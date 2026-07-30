@@ -1,6 +1,5 @@
 import { useState, useCallback, useRef } from "react";
-import { clsx } from "clsx";
-import { PUZZLES, pickPuzzle, getWordCells } from "../../data/wordSearchPuzzles";
+import { PUZZLES, getWordCells } from "../../data/wordSearchPuzzles";
 import Toast from "../Toast";
 
 // ── Helpers ───────────────────────────────────────────────────────
