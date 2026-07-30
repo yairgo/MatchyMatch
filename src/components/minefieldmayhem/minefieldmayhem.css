@@ -1,0 +1,43 @@
+.mayhem-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #ff6b6b, #ff3b30);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(255, 59, 48, 0.4);
+  user-select: none;
+}
+
+.mayhem-badge--off {
+  background: var(--fill-tertiary);
+  color: var(--label-tertiary);
+  box-shadow: none;
+}
+
+.mayhem-toggle {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.mayhem-toggle:active {
+  transform: scale(0.93);
+}
+
+.drift-flash {
+  animation: driftPulse 0.55s ease-out;
+}
+
+@keyframes driftPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.7); }
+  60%  { box-shadow: 0 0 0 10px rgba(255, 59, 48, 0); }
+  100% { box-shadow: none; }
+}
+

@@ -140,6 +140,13 @@ const GAMES = [
     color: '#2e7d32',
   },
   {
+    id: 'minefieldmayhem',
+    emoji: '🌪',
+    name: 'Minefield Mayhem',
+    description: 'Minesweeper — but the mines keep moving!',
+    color: '#c62828',
+  },
+  {
     id: 'tictactoe',
     emoji: '⭕',
     name: 'Tic Tac Toe with Brian 🧠',

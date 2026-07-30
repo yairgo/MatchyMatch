@@ -21,6 +21,7 @@ import SnakeBoard from './components/snake/SnakeBoard'
 import SpellingBeeBoard from './components/spellingbee/SpellingBeeBoard'
 import Game2048Board from './components/game2048/Game2048Board'
 import MinesweeperBoard from './components/minesweeper/MinesweeperBoard'
+import MinefieldMayhemBoard from './components/minefieldmayhem/MinefieldMayhemBoard'
 import TicTacToeBoard from './components/tictactoe/TicTacToeBoard'
 import BarrysBlitz from './components/BarrysBlitz'
 import GregsEggBoard from './components/gregsEgg/GregsEggBoard'
@@ -115,6 +116,8 @@ function App() {
           <Game2048Board key={`2048-${gameKey}`} />
         ) : activeGame === 'minesweeper' ? (
           <MinesweeperBoard key={`minesweeper-${gameKey}`} />
+        ) : activeGame === 'minefieldmayhem' ? (
+          <MinefieldMayhemBoard key={`minefieldmayhem-${gameKey}`} />
         ) : activeGame === 'tictactoe' ? (
           <TicTacToeBoard key={`tictactoe-${gameKey}`} />
         ) : activeGame === 'barrysblitz' ? (
