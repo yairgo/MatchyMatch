@@ -32,6 +32,7 @@ import DiceRollBoard from './components/diceroll/DiceRollBoard'
 import PuppyFetchBoard from './components/puppyfetch/PuppyFetchBoard'
 import CatMatchBoard from './components/catmatch/CatMatchBoard'
 import ChessBoard from './components/chess/ChessBoard'
+import CheckersBoard from './components/checkers/CheckersBoard'
 import KennyBoard from './components/kenny/KennyBoard'
 import KenoBoard from './components/keno/KenoBoard'
 import { puzzles } from './data/puzzles'
@@ -133,6 +134,8 @@ function App() {
           <DiceRollBoard key={`diceroll-${gameKey}`} />
         ) : activeGame === 'chess' ? (
           <ChessBoard key={`chess-${gameKey}`} />
+        ) : activeGame === 'checkers' ? (
+          <CheckersBoard key={`checkers-${gameKey}`} />
         ) : activeGame === 'kenny' ? (
           <KennyBoard key={`kenny-${gameKey}`} />
         ) : activeGame === 'keno' ? (
@@ -147,3 +150,4 @@ function App() {
 }
 
 export default App
+
