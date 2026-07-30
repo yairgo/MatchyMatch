@@ -209,6 +209,13 @@ const GAMES = [
     description: 'Click as fast as you can to rack up points!',
     color: '#0a84ff',
   },
+  {
+    id: 'solitaire',
+    emoji: '♠️',
+    name: 'Solitaire',
+    description: 'Classic Klondike card game — stack them all!',
+    color: '#34c759',
+  },
 ]
 
 export default function GamePicker({ onGameSelect }) {
