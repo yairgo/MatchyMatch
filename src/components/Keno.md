@@ -1,0 +1,1 @@
+Keno is a lottery-style game where players select numbers and hope to match them with a random draw. The game involves a board with numbers, and players can choose how many numbers to play with. The game ends when the draw is complete, and players can see if they have won any prizes.
