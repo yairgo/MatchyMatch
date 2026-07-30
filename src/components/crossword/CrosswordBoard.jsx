@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import { clsx } from "clsx";
 import Toast from "../Toast";
 
 // ── Puzzle data ──────────────────────────────────────────────────────────────
@@ -196,7 +195,7 @@ function buildCellNumbers(puzzle) {
 
 // ── Cell component ───────────────────────────────────────────────────────────
 
-function Cell({ letter, answer, state, cellNum, onClick, inputRef, onKeyDown }) {
+function Cell({ letter, state, cellNum, onClick, inputRef, onKeyDown }) {
   // state: 'idle' | 'active-word' | 'active-cell' | 'correct' | 'black'
   const isBlack = state === "black";
   const isActiveCell = state === "active-cell";
@@ -492,7 +491,7 @@ function CrosswordGame({ puzzle, onNewGame }) {
         const next = letters.map((row) => [...row]);
         next[r][c] = key;
         setLetters(next);
-        const solved = updateSolvedClues(next);
+        updateSolvedClues(next);
         if (checkWin(next)) {
           setTimeout(() => setGameState("won"), 200);
           return;

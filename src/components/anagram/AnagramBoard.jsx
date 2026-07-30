@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import { clsx } from "clsx";
 import Toast from "../Toast";
 import { ANAGRAM_WORDS } from "../../data/anagramWords";
 
@@ -54,7 +53,7 @@ function calcPoints(timeLeft) {
 
 // ── Letter tile ──────────────────────────────────────────────────────────────
 
-function LetterTile({ letter, index, state, onClick }) {
+function LetterTile({ letter, state, onClick }) {
   // state: 'scrambled' | 'placed' | 'correct' | 'wrong'
   const base = {
     display: "inline-flex",
@@ -270,7 +269,16 @@ function Game({ onNewGame }) {
     return stopTimer;
   }, [gamePhase, roundIndex, startTimer, stopTimer]);
 
-  // Time ran out
+  const handleSkip = useCallback((timedOut = false) => {
+    if (gamePhase !== "playing") return;
+    stopTimer();
+    if (!timedOut) setToast("Skipped!");
+    else setToast(`Time's up! It was ${currentRound.word}`);
+    advanceRound("skipped");
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [gamePhase, currentRound, stopTimer]);
+
+    // Time ran out
   useEffect(() => {
     if (timeLeft === 0 && gamePhase === "playing") {
       handleSkip(true);
@@ -331,14 +339,6 @@ function Game({ onNewGame }) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [answerSlots]);
 
-  const handleSkip = useCallback((timedOut = false) => {
-    if (gamePhase !== "playing") return;
-    stopTimer();
-    if (!timedOut) setToast("Skipped!");
-    else setToast(`Time's up! It was ${currentRound.word}`);
-    advanceRound("skipped");
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [gamePhase, currentRound, stopTimer]);
 
   const advanceRound = (result) => {
     setRoundResults((prev) => {

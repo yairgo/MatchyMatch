@@ -247,7 +247,7 @@ export function isValidMove(board, from, to, currentTurn) {
 }
 
 // Make a move and return the new board state
-export function makeMove(board, from, to, currentTurn) {
+export function makeMove(board, from, to) {
   const newBoard = board.map((row) => [...row])
   const piece = newBoard[from.row][from.col]
   const capturedPiece = newBoard[to.row][to.col]
@@ -269,8 +269,6 @@ export function makeMove(board, from, to, currentTurn) {
 function getNotation(from, to, piece, capturedPiece) {
   const files = 'abcdefgh'
   const ranks = '87654321'
-
-  const fromSquare = files[from.col] + ranks[from.row]
   const toSquare = files[to.col] + ranks[to.row]
 
   let notation = ''
