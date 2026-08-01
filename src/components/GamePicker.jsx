@@ -203,6 +203,13 @@ const GAMES = [
     color: '#8b7355',
   },
   {
+    id: 'checkers',
+    emoji: '🔴',
+    name: 'Checkers',
+    description: 'Capture all your opponent\'s pieces to win — 2 players',
+    color: '#c0392b',
+  },
+  {
     id: 'kenny',
     emoji: '🎮',
     name: "Kenny's Click Challenge",
@@ -258,3 +265,4 @@ export default function GamePicker({ onGameSelect }) {
     </div>
   )
 }
+
